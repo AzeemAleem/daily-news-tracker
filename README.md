@@ -28,17 +28,9 @@ yarn install
 Second, run the development server:
 yarn start
 
-Folder Structure:
-├── src/
-│   ├── api/              # API integration
-│   ├── components/       # Reusable UI components
-│   ├── pages/            # Page-level components (Home, Detail)
-│   ├── redux/            # Redux Toolkit setup
-│   └── App.js
-├── cypress/              # Cypress E2E tests
-├── public/
-└── README.md
 
 SonarQube Report
 ![image](https://github.com/user-attachments/assets/ae47bcc6-d071-4cbd-9d17-ddfc01a782c4)
+
+![image](https://github.com/user-attachments/assets/975f5b92-e3bc-4e35-8f6f-5270fd1387ed)
 
