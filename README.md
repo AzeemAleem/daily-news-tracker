@@ -38,3 +38,7 @@ Folder Structure:
 ├── cypress/              # Cypress E2E tests
 ├── public/
 └── README.md
+
+SonarQube Report
+![image](https://github.com/user-attachments/assets/ae47bcc6-d071-4cbd-9d17-ddfc01a782c4)
+
