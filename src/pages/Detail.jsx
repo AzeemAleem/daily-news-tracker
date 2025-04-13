@@ -4,17 +4,14 @@ import { useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { CalendarOutlined, UserOutlined } from "@ant-design/icons";
 
-// Destructure components from Typography
+
 const { Title, Paragraph } = Typography;
 
-// Main function component for Article Details
+
 export default function ArticlesDetails() {
     const navigate = useNavigate(); // Hook to programmatically navigate
-
-    // Get the articleId from the URL parameters
     const { articleId } = useParams("articleId");
 
-    // Get articles from the Redux store
     const { articles } = useSelector((state) => state.article);
 
     // Find the specific article based on articleId
@@ -22,7 +19,6 @@ export default function ArticlesDetails() {
         (article) => article.id === parseInt(articleId)
     );
 
-    // Effect to navigate to Articles route if the article is not found
     useEffect(() => {
         if (!article) {
             navigate("/");
@@ -57,8 +53,8 @@ export default function ArticlesDetails() {
                         <Paragraph>
                             {article?.abstract}
                             <ul style={{ marginBlock: 15 }}>
-                                {article?.des_facet?.map((facet, idx) => (
-                                    <li key={idx}>{facet}</li>
+                                {article?.des_facet?.map((facet, id) => (
+                                    <li key={id}>{facet}</li>
                                 ))}
                             </ul>
                         </Paragraph>
@@ -70,8 +66,8 @@ export default function ArticlesDetails() {
                             <UserOutlined /> {article?.byline}
                         </Typography>
                         <Flex gap={4} wrap style={{ marginTop: 20 }}>
-                            {article?.adx_keywords?.split(";")?.map((keyword, idx) => (
-                                <Tag color="default" key={idx}>
+                            {article?.adx_keywords?.split(";")?.map((keyword, id) => (
+                                <Tag color="default" key={id}>
                                     {keyword}
                                 </Tag>
                             ))}
